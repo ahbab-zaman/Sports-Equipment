@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "category_name": "Fitness Equipment",
+    "description": "Equipment for strength training, cardio, and flexibility.",
+    "image_url": "https://i.ibb.co.com/yFFjpf3/man-2604149-1920.jpg"
+  },
+  {
+    "id": 2,
+    "category_name": "Outdoor Sports",
+    "description": "Gear for sports played outdoors like soccer, cricket, and tennis.",
+    "image_url": "https://i.ibb.co.com/rZQLYph/gym-5977600-1920.jpg"
+  },
+  {
+    "id": 3,
+    "category_name": "Indoor Games",
+    "description": "Equipment for table tennis, chess, and other indoor games.",
+    "image_url": "https://i.ibb.co.com/Qr1Zdyt/woman-6143052-1920.jpg"
+  },
+  {
+    "id": 4,
+    "category_name": "Cycling",
+    "description": "Bikes and accessories for mountain biking, road biking, and more.",
+    "image_url": "https://i.ibb.co.com/yPp7BbQ/bicycles-4245347-1920.jpg"
+  },
+  {
+    "id": 5,
+    "category_name": "Water Sports",
+    "description": "Gear for swimming, snorkeling, paddleboarding, and kayaking.",
+    "image_url": "https://i.ibb.co.com/K2MwLPQ/swimming-goggles-2390958-1920.jpg"
+  },
+  {
+    "id": 6,
+    "category_name": "Winter Sports",
+    "description": "Equipment for skiing, snowboarding, and other winter activities.",
+    "image_url": "https://i.ibb.co.com/K9Pgvh8/parachutes-2700972-1920.jpg"
+  },
+  {
+    "id": 7,
+    "category_name": "Adventure Gear",
+    "description": "Climbing, hiking, and camping equipment for outdoor enthusiasts.",
+    "image_url": "https://i.ibb.co.com/ZNCxsfZ/mountains-7846880-1920.jpg"
+  },
+  {
+    "id": 8,
+    "category_name": "Team Sports",
+    "description": "Gear for team sports like basketball, volleyball, and hockey.",
+    "image_url": "https://i.ibb.co.com/gd9kg4L/volleyball-team-1583668-1920.jpg"
+  },
+  {
+    "id": 9,
+    "category_name": "Racquet Sports",
+    "description": "Equipment for tennis, badminton, squash, and other racquet games.",
+    "image_url": "https://i.ibb.co.com/VjxnB74/tennis-5782695-1920.jpg"
+  }
+]
