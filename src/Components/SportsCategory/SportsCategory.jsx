@@ -18,7 +18,7 @@ const SportsCategory = () => {
             <p className="w-1/2 mx-auto">These are the latest category in our shop. You can buy or order any of these products as you like.</p>
            </div>
 
-           <div className="grid grid-cols-3 gap-4 py-6">
+           <div className="grid lg:grid-cols-3 grid-cols-1 justify-items-center gap-4 py-6">
             {
                 categories.map(category => <CategoryCard key={category.id} category={category}></CategoryCard>)
             }

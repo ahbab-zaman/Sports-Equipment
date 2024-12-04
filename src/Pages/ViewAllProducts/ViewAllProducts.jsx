@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
+import Title from "../../Components/Title/Title";
 
 const ViewAllProducts = () => {
+  Title("ViewAllProducts")
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("./productSection.json")

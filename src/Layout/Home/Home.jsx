@@ -3,8 +3,10 @@ import Banner from "../../Components/Banner/Banner";
 import Brands from "../../Components/Brands/Brands";
 import ProductSection from "../../Components/ProductSection/ProductSection";
 import SportsCategory from "../../Components/SportsCategory/SportsCategory";
+import Title from "../../Components/Title/Title";
 
 const Home = () => {
+    Title("Home")
     return (
         <div>
             {/* Banner section */}
