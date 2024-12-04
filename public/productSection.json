@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "product_category": "Fitness",
+      "product_image": "https://i.ibb.co.com/NSkD5qR/2400-male-athlete-doing-push-ups-at-the-gym.jpg",
+      "product_title": "Adjustable Dumbbell Set",
+      "product_description": "A compact and versatile dumbbell set for home workouts.",
+      "product_price": 120,
+      "review": 4.7
+    },
+    {
+      "id": 2,
+      "product_category": "Outdoor Sports",
+      "product_image": "https://i.ibb.co.com/5M1KWh6/2400-golf-ball-and-club-in-golf-course.jpg",
+      "product_title": "Professional Soccer Ball",
+      "product_description": "High-quality soccer ball for professional and recreational use.",
+      "product_price": 100,
+      "review": 4.4
+    },
+    {
+      "id": 3,
+      "product_category": "Fitness",
+      "product_image": "https://i.ibb.co.com/0BpsN2t/2400-rear-view-young-woman-in-sportive-wear-and-with-slim-body-have-fitness-yoga-day-indoors.jpg",
+      "product_title": "Resistance Bands Set",
+      "product_description": "Durable and portable bands for strength training and rehabilitation.",
+      "product_price": 40,
+      "review": 4.1
+    },
+    {
+      "id": 4,
+      "product_category": "Water Sports",
+      "product_image": "https://i.ibb.co.com/N22JjfZ/2400-many-purple-or-violet-red-blue-and-green-life-jacket-hanging-on-stainless-steel-hanger-for-peop.jpg",
+      "product_title": "Swimming Jacket",
+      "product_description": "Anti-fog and UV-protected goggles for clear underwater vision.",
+      "product_price": 300,
+      "review": 4.5
+    },
+    {
+      "id": 5,
+      "product_category": "Outdoor Sports",
+      "product_image": "https://i.ibb.co.com/D9mnS3Y/2400-badminton-sports-equipments-shuttlecocks-racket-grip-on-floor-of-indoor-badminton-court.jpg",
+      "product_title": "Badminton Racket",
+      "product_description": "Lightweight and durable racket for high-performance gameplay.",
+      "product_price": 190,
+      "review": 4.7
+    },
+    {
+      "id": 6,
+      "product_category": "Cycling",
+      "product_image": "https://i.ibb.co.com/hHR4Cqk/bottom-bracket-1204870-1280.jpg",
+      "product_title": "Mountain Bike",
+      "product_description": "A rugged bike designed for off-road adventures.",
+      "product_price": 440,
+      "review": 4.3
+    },
+    {
+      "id": 7,
+      "product_category": "Winter Sports",
+      "product_image": "https://i.ibb.co.com/QcVr5Q1/ski-932188-1920.jpg",
+      "product_title": "Snowboard",
+      "product_description": "High-performance snowboard for beginners and experts.",
+      "product_price": 210,
+      "review": 4.6
+    },
+    {
+      "id": 8,
+      "product_category": "Adventure Gear",
+      "product_image": "https://i.ibb.co.com/pjWczrF/serrai-di-sottoguda-2017006-1280.jpg",
+      "product_title": "Rock Climbing Harness",
+      "product_description": "Comfortable and secure harness for safe climbing experiences.",
+      "product_price": 300,
+      "review": 3.9
+    },
+    {
+      "id": 9,
+      "product_category": "Outdoor Sports",
+      "product_image": "https://i.ibb.co.com/hdVTqfk/racket-6308994-1280.jpg",
+      "product_title": "Tennis Racket",
+      "product_description": "A professional-grade racket for precision and power.",
+      "product_price": 400,
+      "review": 4.7
+    }
+  ]
+  

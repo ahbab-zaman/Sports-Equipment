@@ -6,6 +6,7 @@ import AddEquipment from "../Layout/AddEquipment/AddEquipment";
 import MyList from "../Layout/MyList/MyList";
 import Login from "../Layout/Login/Login";
 import Register from "../Layout/Register/Register";
+import ViewAllProducts from "../Pages/ViewAllProducts/ViewAllProducts";
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
             {
                 path:"/register",
                 element:<Register></Register>
+            },
+            {
+                path:"/viewAll",
+                element:<ViewAllProducts></ViewAllProducts>
             }
         ]
     }
