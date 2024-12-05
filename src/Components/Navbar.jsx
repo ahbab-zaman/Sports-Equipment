@@ -38,7 +38,7 @@ const Navbar = () => {
               <NavLink to="/addEquipment">Add Equipments</NavLink>
             </li>
             <li>
-              <NavLink to="/myLIst">My Equipment List</NavLink>
+              <NavLink to="/myList">My Equipment List</NavLink>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <NavLink to="/addEquipment">Add Equipments</NavLink>
           </li>
           <li>
-            <NavLink to="/myLIst">My Equipment List</NavLink>
+            <NavLink to="/myList">My Equipment List</NavLink>
           </li>
         </ul>
       </div>

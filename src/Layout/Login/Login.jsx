@@ -3,11 +3,12 @@ import Title from "../../Components/Title/Title";
 import googleImage from "../../assets/google.png";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../Firebase/Firebase.init";
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation();
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -19,7 +20,7 @@ const Login = () => {
     userLogin(email, password)
       .then((result) => {
         console.log(result);
-        navigate('/')
+        navigate(location?.state ? location.state : "/")
       })
       .catch((error) => {
         console.log(error);
