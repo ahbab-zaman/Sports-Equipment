@@ -1,5 +1,5 @@
 import Title from "../../Components/Title/Title";
-import { FaGoogle } from "react-icons/fa";
+import googleImage from "../../assets/google.png"
 const Login = () => {
   Title("Login");
   return (
@@ -49,14 +49,16 @@ const Login = () => {
                     Login
                   </button>
                 </div>
-
-                <div className="form-control justify-between mt-6">
-                  <div><FaGoogle></FaGoogle></div>
-                  <div>
-                    SignIn With Google
-                  </div>
-                  <div></div>
+                <div className="text-center text-lg font-bold">
+                    Or
                 </div>
+
+                <button className="form-control flex-row justify-center gap-4 items-center p-3 mt-2 border rounded-full">
+                  <div><img className="w-[30px]" src={googleImage} alt="" /></div>
+                  <div className="text-xl font-semibold">
+                    Signin With Google
+                  </div>
+                </button>
 
               </form>
             </div>
