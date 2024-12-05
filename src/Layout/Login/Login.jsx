@@ -1,6 +1,34 @@
+import { useContext } from "react";
 import Title from "../../Components/Title/Title";
 import googleImage from "../../assets/google.png"
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Login = () => {
+
+  const {userLogin} = useContext(AuthContext)
+
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value
+    const password = form.password.value
+    const signInUser = {email, password}
+    console.log(signInUser)
+
+    userLogin(email, password)
+    .then(result => {
+      console.log(result)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
+
+
+
+
+
   Title("Login");
   return (
     <div>
@@ -11,22 +39,18 @@ const Login = () => {
         <div className="hero">
           <div className="hero-content w-full flex-col">
             <div className="card shrink-0 shadow-2x w-3/4 border mx-auto">
-              <form className="card-body w-full mx-auto">
+              <form onSubmit={handleSignIn} className="card-body w-full mx-auto">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Enter your email"
                     className="input input-bordered"
                     required
                   />
-                  <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label>
                 </div>
                 <div className="form-control">
                   <label className="label">
@@ -34,6 +58,7 @@ const Login = () => {
                   </label>
                   <input
                     type="password"
+                    name="password"
                     placeholder="Enter your password"
                     className="input input-bordered"
                     required
