@@ -8,6 +8,7 @@ const ProductSection = () => {
         .then(res=> res.json())
         .then(data=> {
             console.log(data)
+            setProducts(data)
         })
     },[])
     return (
@@ -18,7 +19,7 @@ const ProductSection = () => {
            </div>
            <div className="grid lg:grid-cols-3 grid-cols-1 py-4 gap-4">
                 {
-                    products.map(product => <ProductCard product={product} key={product.id}></ProductCard>).slice(0,6)
+                    products.map(product => <ProductCard product={product} key={product._id}></ProductCard>)
                 }
            </div>
 

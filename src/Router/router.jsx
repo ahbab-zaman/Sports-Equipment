@@ -6,7 +6,7 @@ import AddEquipment from "../Layout/AddEquipment/AddEquipment";
 import MyList from "../Layout/MyList/MyList";
 import Login from "../Layout/Login/Login";
 import Register from "../Layout/Register/Register";
-import ViewAllProducts from "../Pages/ViewAllProducts/ViewAllProducts";
+import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 
 export const router = createBrowserRouter([
     {
@@ -38,8 +38,9 @@ export const router = createBrowserRouter([
                 element:<Register></Register>
             },
             {
-                path:"/viewAll",
-                element:<ViewAllProducts></ViewAllProducts>
+                path:"/viewAll/:id",
+                element:<ViewDetails></ViewDetails>,
+                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
             }
         ]
     }
