@@ -5,7 +5,7 @@ const AddEquipment = () => {
   return (
     <div className="w-11/12 mx-auto py-6">
       <form>
-        <div className="flex flex-col">
+        <div className="flex flex-col border p-4 rounded-xl">
           <div className="flex items-center justify-center gap-6">
             <div className="form-control w-full">
               <label className="label">

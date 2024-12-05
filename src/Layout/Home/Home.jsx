@@ -21,13 +21,13 @@ const Home = () => {
             <div>
                 <SportsCategory></SportsCategory>
             </div>
-            {/* Brands sections */}
-            <div>
-            <Brands></Brands>
-            </div>
             {/* About section */}
             <div>
                 <About></About>
+            </div>
+            {/* Brands sections */}
+            <div>
+            <Brands></Brands>
             </div>
         </div>
     );

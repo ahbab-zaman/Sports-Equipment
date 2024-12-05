@@ -58,8 +58,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-3">
-        <button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold"><Link to="/login">Login</Link></button>
-        <button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold"><Link to="/register">Register</Link></button>
+      <Link to="/login"><button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold">Login</button></Link>
+        <Link to="/register"><button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold">Registration</button></Link>
       </div>
     </div>
   );
