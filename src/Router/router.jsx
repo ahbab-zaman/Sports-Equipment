@@ -7,11 +7,13 @@ import MyList from "../Layout/MyList/MyList";
 import Login from "../Layout/Login/Login";
 import Register from "../Layout/Register/Register";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import ErrorPage from "../Layout/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:"/",
