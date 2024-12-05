@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import { Link } from "react-router-dom";
 
 const ProductSection = () => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
-        fetch('./productSection.json')
+        fetch('http://localhost:5000/products')
         .then(res=> res.json())
         .then(data=> {
-            setProducts(data)
+            console.log(data)
         })
     },[])
     return (
@@ -22,9 +21,7 @@ const ProductSection = () => {
                     products.map(product => <ProductCard product={product} key={product.id}></ProductCard>).slice(0,6)
                 }
            </div>
-           <div className="">
-           <Link to="/viewAll"><button className="btn rounded-none btn-neutral w-3/4 flex mx-auto justify-center text-lg font-semibold">View Details</button></Link>
-           </div>
+
         </div>
     );
 };

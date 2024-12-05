@@ -2,9 +2,43 @@ import Title from "../../Components/Title/Title";
 
 const AddEquipment = () => {
   Title("Add Equipment");
+
+  const handleAddEquipment = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const item = form.item.value
+    const category = form.category.value
+    const description = form.description.value
+    const photo = form.photo.value
+    const rating = form.rating.value
+    const custom = form.custom.value
+    const price = form.price.value
+    const process = form.process.value
+    const stock = form.stock.value
+    const name = form.name.value
+    const email = form.email.value
+    const newEquipments = {item, category, description, photo, rating, custom, price, process, stock, name, email}
+    console.log(newEquipments)
+
+
+    fetch('http://localhost:5000/products',{
+      method:'POST',
+      headers:{
+        "Content-type": "application/json"
+      },
+      body:JSON.stringify(newEquipments)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+    })
+  }
+
+
+
   return (
     <div className="w-11/12 mx-auto py-6">
-      <form>
+      <form onSubmit={handleAddEquipment}>
         <div className="flex flex-col border p-4 rounded-xl">
           <div className="flex items-center justify-center gap-6">
             <div className="form-control w-full">
