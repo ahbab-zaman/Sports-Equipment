@@ -41,8 +41,8 @@ const AddEquipment = () => {
     <div className="w-11/12 mx-auto py-6">
       <form onSubmit={handleAddEquipment}>
         <div className="flex flex-col border p-4 rounded-xl">
-          <div className="flex items-center justify-center gap-6">
-            <div className="form-control w-full">
+          <div className="flex items-center justify-center lg:gap-6 gap-2">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">Item Name</span>
               </label>
@@ -54,7 +54,7 @@ const AddEquipment = () => {
                 required
               />
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">Category Name</span>
               </label>
@@ -68,8 +68,8 @@ const AddEquipment = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-6">
-            <div className="form-control w-full">
+          <div className="flex items-center justify-center lg:gap-6 gap-2">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">Description</span>
               </label>
@@ -81,7 +81,7 @@ const AddEquipment = () => {
                 required
               />
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">Photo URL</span>
               </label>
@@ -95,8 +95,8 @@ const AddEquipment = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-6">
-            <div className="form-control w-full">
+          <div className="flex items-center justify-center lg:gap-6 gap-2">
+            <div className="form-control w-1/3">
               <label className="label">
                 <span className="label-text">Rating</span>
               </label>
@@ -108,7 +108,7 @@ const AddEquipment = () => {
                 required
               />
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-1/3">
               <label className="label">
                 <span className="label-text">Customization</span>
               </label>
@@ -120,7 +120,7 @@ const AddEquipment = () => {
                 required
               />
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-1/3">
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
@@ -134,8 +134,8 @@ const AddEquipment = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-6">
-            <div className="form-control w-full">
+          <div className="flex items-center justify-center lg:gap-6 gap-2">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">Processing Time</span>
               </label>
@@ -147,7 +147,7 @@ const AddEquipment = () => {
                 required
               />
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">In Stock</span>
               </label>
@@ -161,8 +161,8 @@ const AddEquipment = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-6">
-            <div className="form-control w-full">
+          <div className="flex items-center justify-center lg:gap-6 gap-2">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">User Name</span>
               </label>
@@ -174,7 +174,7 @@ const AddEquipment = () => {
                 required
               />
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-1/2">
               <label className="label">
                 <span className="label-text">User Email</span>
               </label>

@@ -5,8 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   Title("Register");
-  const {userRegister} = useContext(AuthContext)
-  const navigate = useNavigate()
+  const { userRegister, profileUpdate, user, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleRegistration = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,16 +14,23 @@ const Register = () => {
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
-    const userInfo = {name, email, photo, password}
-    console.log(userInfo)
+    const userInfo = { name, email, photo, password };
+    console.log(userInfo);
     userRegister(email, password)
-    .then(res => {
-      console.log(res.user)
-      navigate('/')
-    })
-    .catch(error => {
-      console.log(error)
-    })
+      .then((res) => {
+        setUser(res.user);
+        profileUpdate({ photoURL: photo, displayName: name })
+        .then(()=>{
+          navigate('/')
+        })
+        .catch(error => {
+          console.log(error.code)
+        })
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div>
@@ -93,7 +100,12 @@ const Register = () => {
                   </button>
                 </div>
                 <div className="py-4">
-                  <p className="text-center font-semibold">Already have an account ? <Link className="text-blue-500 link" to="/login">Login</Link></p>
+                  <p className="text-center font-semibold">
+                    Already have an account ?{" "}
+                    <Link className="text-blue-500 link" to="/login">
+                      Login
+                    </Link>
+                  </p>
                 </div>
               </form>
             </div>

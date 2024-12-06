@@ -23,6 +23,7 @@ export const router = createBrowserRouter([
       {
         path: "/allEquipment",
         element: <AllEquipment></AllEquipment>,
+        loader:()=> fetch('http://localhost:5000/allProducts')
       },
       {
         path: "/addEquipment",

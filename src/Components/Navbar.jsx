@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-  const { user, setUser,userSignOut } = useContext(AuthContext);
+  const { user, setUser, userSignOut } = useContext(AuthContext);
   return (
     <div className="navbar">
       <div className="navbar-start">
@@ -62,11 +62,19 @@ const Navbar = () => {
       </div>
       <div className="navbar-end space-x-3">
         {user ? (
-          <Link to="/login">
-          <button  onClick={userSignOut} className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold">
-            Logout
-          </button>
-        </Link>
+          <div className="flex items-center gap-2">
+             <span className="tooltip tooltip-bottom" data-tip={`${user?.displayName}`}>
+            <img className="w-12 rounded-full cursor-pointer" src={user?.photoURL} alt="" />
+            </span>
+            <Link to="/login">
+              <button
+                onClick={userSignOut}
+                className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold"
+              >
+                Logout
+              </button>
+            </Link>
+          </div>
         ) : (
           <div className="space-x-3">
             <Link to="/login">
