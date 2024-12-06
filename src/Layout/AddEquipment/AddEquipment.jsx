@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import Title from "../../Components/Title/Title";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const AddEquipment = () => {
   Title("Add Equipment");
-
+  const {user} = useContext(AuthContext)
   const handleAddEquipment = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -169,6 +171,7 @@ const AddEquipment = () => {
               <input
                 type="text"
                 name="name"
+                value={user?.displayName}
                 placeholder="Enter Item User Name"
                 className="input input-bordered"
                 required
@@ -181,6 +184,7 @@ const AddEquipment = () => {
               <input
                 type="email"
                 name="email"
+                value={user?.email}
                 placeholder="Enter User Email"
                 className="input input-bordered"
                 required
