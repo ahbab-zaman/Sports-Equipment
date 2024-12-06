@@ -4,31 +4,32 @@ import Title from "../../Components/Title/Title";
 const AllEquipment = () => {
   const allEquipment = useLoaderData();
   console.log(allEquipment);
+
   Title("All Equipment");
   return (
     <div>
-      <div className="overflow-x-auto w-11/12 mx-auto">
-        <table className="table w-11/12 mx-auto">
+      <div className="overflow-x-auto px-2">
+        <table className="table ">
           {/* head */}
           <thead>
-            <tr>
-              <th>SL No.</th>
+            <tr >
+              <th className="hidden lg:table"></th>
               <th>Image</th>
-              <th>Equipment Name</th>
+              <th>Product Name</th>
               <th>Category</th>
-              <th>Price</th>
-              <th>Details</th>
+              <th className="hidden lg:table">Price</th>
+              <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {allEquipment.map((equipment, idx) => (
-              <tr key={equipment._id} className="hover">
-                <th>{idx + 1}</th>
-                <th><img className="w-[40px]" src={equipment.photo} alt="" /></th>
+              <tr equipment={equipment} key={equipment._id}>
+                <th className="hidden lg:table">{idx + 1}</th>
+                <td><img className="w-10" src={equipment.photo} alt="" /></td>
                 <td>{equipment.item}</td>
                 <td>{equipment.category}</td>
-                <td>{equipment.price}</td>
-                <td><Link to={`/viewAll/${equipment._id}`}><button className="px-3 py-1 btn rounded-none bg-[#1c1c1ccd] text-[#fff]">View Details</button></Link></td>
+                <td className="hidden lg:table">{equipment.price}</td>
+                <td className="px-0"><Link><button className="px-3 py-1 text-[12px] lg:text-base bg-[#1c1c1ccd] text-[#fff]">View Details</button></Link></td>
               </tr>
             ))}
           </tbody>
