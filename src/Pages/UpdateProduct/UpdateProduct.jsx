@@ -3,43 +3,54 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const UpdateProduct = () => {
-    const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const updatedData = useLoaderData();
+  console.log(updatedData)
 
   const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
-    const item = form.item.value
-    const category = form.category.value
-    const description = form.description.value
-    const photo = form.photo.value
-    const rating = form.rating.value
-    const custom = form.custom.value
-    const price = form.price.value
-    const process = form.process.value
-    const stock = form.stock.value
-    const name = form.name.value
-    const email = form.email.value
-    const updatedEquipments = {item, category, description, photo, rating, custom, price, process, stock, name, email}
-    console.log(updatedEquipments)
+    const item = form.item.value;
+    const category = form.category.value;
+    const description = form.description.value;
+    const photo = form.photo.value;
+    const rating = form.rating.value;
+    const custom = form.custom.value;
+    const price = form.price.value;
+    const process = form.process.value;
+    const stock = form.stock.value;
+    const name = form.name.value;
+    const email = form.email.value;
+    const updatedEquipments = {
+      item,
+      category,
+      description,
+      photo,
+      rating,
+      custom,
+      price,
+      process,
+      stock,
+      name,
+      email,
+    };
+    console.log(updatedEquipments);
 
-
-    fetch(`http://localhost:5000/products/${updatedData._id}`,{
-        method:'PUT',
-        headers:{
-            "Content-type":"application/json",
-        },
-        body:JSON.stringify(updatedEquipments)
+fetch(`http://localhost:5000/allProducts/${updatedData._id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedEquipments),
     })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        if(data.modifiedCount > 0){
-            alert("Updated Successfully")
-            form.rest()
+      .then((res) => res.json())
+      .then((data) => {
+          console.log(data);
+          if (data.modifiedCount > 0) {
+              alert("Updated Successfully");
         }
-    })
-  }
+      });
+  };
 
   return (
     <div>

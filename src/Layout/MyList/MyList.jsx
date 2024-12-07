@@ -8,9 +8,10 @@ const MyList = () => {
   const { user } = useContext(AuthContext);
   const [myUser, setMyUser] = useState([]);
   const [deleteProduct, setDeleteProduct] = useState(myUser)
+  console.log(deleteProduct)
   Title("My Equipment List");
   useEffect(() => {
-    fetch(`http://localhost:5000/myProducts/${user.email}`)
+    fetch(`http://localhost:5000/myProduct/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setDeleteProduct(data);

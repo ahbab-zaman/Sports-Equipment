@@ -28,7 +28,7 @@ const AllEquipment = () => {
                 <td><img className="w-10" src={equipment.photo} alt="" /></td>
                 <td>{equipment.item}</td>
                 <td>{equipment.category}</td>
-                <td>{equipment.price}</td>
+                <td>${equipment.price}</td>
                 <td className="px-0"><Link to={`/viewAll/${equipment._id}`}><button className="px-3 py-1 text-[12px] lg:text-base bg-[#1c1c1ccd] font-semibold text-[#fff]">View Details</button></Link></td>
               </tr>
             ))}
