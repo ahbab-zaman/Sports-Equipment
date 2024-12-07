@@ -5,7 +5,7 @@ const MyUser = ({ list, setDeleteProduct, deleteProduct }) => {
   const { item, photo, category, _id, price, rating } = list;
   const handleDelete = (id) =>{
     console.log(id)
-    fetch(`http://localhost:5000/products/${id}`,{
+    fetch(`https://equi-sports-server-side-two.vercel.app/products/${id}`,{
       method:'DELETE'
     })
     .then(res => res.json())

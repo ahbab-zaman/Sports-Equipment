@@ -23,7 +23,7 @@ const AddEquipment = () => {
     console.log(newEquipments)
 
 
-    fetch('http://localhost:5000/products',{
+    fetch('https://equi-sports-server-side-two.vercel.app/products',{
       method:'POST',
       headers:{
         "Content-type": "application/json"
