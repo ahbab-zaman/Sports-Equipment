@@ -1,9 +1,27 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const MyUser = ({ list }) => {
+const MyUser = ({ list, setDeleteProduct, deleteProduct }) => {
   const { item, photo, category, _id, price, rating } = list;
+  const handleDelete = (id) =>{
+    console.log(id)
+    fetch(`http://localhost:5000/products/${id}`,{
+      method:'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+
+      if(data.deletedCount > 0){
+        alert("Product deleted successfully")
+
+        const remainingProduct = deleteProduct.filter(product => product._id !== id)
+        setDeleteProduct(remainingProduct)
+      }
+    })
+  }
   return (
-    <div>
+    <div className="">
       <div className="card card-compact bg-base-100 shadow-xl">
         <figure className="w-full">
           <img
@@ -22,9 +40,8 @@ const MyUser = ({ list }) => {
             <Link to={`/viewAll/${_id}`}><p className="link font-semibold">View Details</p></Link>
           </div>
           <div className="flex justify-between items-center space-y-2">
-            <Link><button className="px-4 py-2 bg-[#1c1c1ccd] text-[#fff] font-semibold">Update</button></Link>
-            <Link><button className="px-4 py-2 bg-[#1c1c1ccd] text-[#fff] font-semibold">Delete</button></Link>
-            
+            <Link to={`/updateProduct/${_id}`}><button className="px-4 py-2 bg-[#1c1c1ccd] text-[#fff] font-semibold">Update</button></Link>
+            <Link><button onClick={()=>handleDelete(_id)} className="px-4 py-2 bg-[#1c1c1ccd] text-[#fff] font-semibold">Delete</button></Link>
           </div>
         </div>
       </div>

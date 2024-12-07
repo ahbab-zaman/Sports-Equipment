@@ -9,6 +9,7 @@ import Register from "../Layout/Register/Register";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import ErrorPage from "../Layout/ErrorPage/ErrorPage";
 import PrivateRoute from "../Layout/PrivateRoute/PrivateRoute";
+import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 
 export const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
           <PrivateRoute>
             <MyList></MyList>
           </PrivateRoute>
-        )
+        ),
       },
       {
         path: "/login",
@@ -51,10 +52,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/viewAll/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.id}`),
       },
+      {
+        path:"/updateProduct/:id",
+        element:<UpdateProduct></UpdateProduct>,
+        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+      }
     ],
   },
 ]);
