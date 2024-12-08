@@ -15,7 +15,7 @@ const AddEquipment = () => {
     const photo = form.photo.value
     const rating = form.rating.value
     const custom = form.custom.value
-    const price = form.price.value
+    const price = parseInt(form.price.value)
     const process = form.process.value
     const stock = form.stock.value
     const name = form.name.value
@@ -134,7 +134,7 @@ const AddEquipment = () => {
                 <span className="label-text">Price</span>
               </label>
               <input
-                type="text"
+                type="number"
                 name="price"
                 placeholder="Enter item price"
                 className="input input-bordered"

@@ -9,7 +9,7 @@ const AllEquipment = () => {
     fetch("https://equi-sports-server-side-two.vercel.app/allProduct")
       .then((res) => res.json())
       .then((data) => {
-        setSortItem(data);
+        setSortItem(data)
       });
   };
 
@@ -20,7 +20,7 @@ const AllEquipment = () => {
         <div></div>
         <div>
           <button
-            onClick={() => handleSort("price")}
+            onClick={() => handleSort()}
             className="btn rounded-none py-2 px-4 text-[#fff] font-bold bg-[#1c1c1ccd]"
           >
             Sort By Price
