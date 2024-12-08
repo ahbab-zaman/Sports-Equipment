@@ -38,8 +38,8 @@ const MyUser = ({ list, setDeleteProduct, deleteProduct }) => {
   return (
     <div className="">
       <div className="card card-compact bg-base-100 shadow-xl">
-        <figure className="w-full">
-          <img src={photo} alt="Equipment" />
+        <figure className="">
+          <img className="w-full h-[300px]" src={photo} alt="Equipment" />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold">{item}</h2>
