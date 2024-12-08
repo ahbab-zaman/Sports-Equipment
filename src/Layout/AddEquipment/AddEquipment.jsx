@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import Title from "../../Components/Title/Title";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from 'sweetalert2'
 
 const AddEquipment = () => {
   Title("Add Equipment");
-  const {user} = useContext(AuthContext)
+  const {user,setUser} = useContext(AuthContext)
   const handleAddEquipment = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -32,7 +33,13 @@ const AddEquipment = () => {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
+      setUser(data)
+      Swal.fire({
+        title: 'Item Added Successfully',
+        text: 'Check Your Equipment LIst',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
       form.reset()
     })
   }

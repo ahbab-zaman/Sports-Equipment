@@ -10,6 +10,8 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import ErrorPage from "../Layout/ErrorPage/ErrorPage";
 import PrivateRoute from "../Layout/PrivateRoute/PrivateRoute";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
+import Practice from "../Practice";
+
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +26,8 @@ export const router = createBrowserRouter([
       {
         path: "/allEquipment",
         element: <AllEquipment></AllEquipment>,
-        loader: () => fetch("https://equi-sports-server-side-two.vercel.app/allProducts"),
+        loader: () =>
+          fetch("https://equi-sports-server-side-two.vercel.app/allProducts"),
       },
       {
         path: "/addEquipment",
@@ -58,15 +61,28 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://equi-sports-server-side-two.vercel.app/products/${params.id}`),
+          fetch(
+            `https://equi-sports-server-side-two.vercel.app/products/${params.id}`
+          ),
       },
       {
-        path:"/updateProduct/:id",
-        element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(`https://equi-sports-server-side-two.vercel.app/allProducts/${params.id}`)
-      }
+        path: "/updateProduct/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://equi-sports-server-side-two.vercel.app/allProducts/${params.id}`
+          ),
+      },
     ],
   },
+  {
+    path:"/practice",
+    element:<Practice></Practice>
+  }
 ]);
 
 export default router;

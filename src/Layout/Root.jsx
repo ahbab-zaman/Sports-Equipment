@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { Bounce, Fade } from "react-awesome-reveal";
 
 const Root = () => {
   return (
     <div>
-      <div className="w-11/12 mx-auto">
-        <Navbar></Navbar>
-      </div>
+        <div className="w-11/12 mx-auto">
+          <Navbar></Navbar>
+        </div>
       <div className="min-h-[calc(100vh-292px)]">
         <Outlet></Outlet>
       </div>

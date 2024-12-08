@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Bounce, Fade } from "react-awesome-reveal";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, setUser, userSignOut } = useContext(AuthContext);
@@ -41,7 +43,7 @@ const Navbar = () => {
               <NavLink to="/myList">My Equipment List</NavLink>
             </li>
           </ul>
-        </div>
+        </div>{" "}
         <h2 className="text-[22px] font-semibold">SportsGear</h2>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -63,9 +65,17 @@ const Navbar = () => {
       <div className="navbar-end space-x-3">
         {user ? (
           <div className="flex items-center gap-2">
-             <span className="tooltip tooltip-bottom" data-tip={`${user?.displayName}`}>
-            <img className="w-12 rounded-full cursor-pointer" src={user?.photoURL} alt="" />
+            <span className="" id="my-anchor-element-id">
+              <img
+                className="w-12 rounded-full cursor-pointer"
+                src={user?.photoURL}
+              />
             </span>
+            <Tooltip
+              anchorSelect="#my-anchor-element-id"
+              className="text-white z-10"
+              content={`${user?.displayName}`}
+            />
             <Link to="/login">
               <button
                 onClick={userSignOut}

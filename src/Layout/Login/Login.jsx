@@ -5,8 +5,9 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../Firebase/Firebase.init";
+import toast from "react-hot-toast";
 const Login = () => {
-  const { userLogin } = useContext(AuthContext);
+  const { userLogin, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const handleSignIn = (e) => {
@@ -19,11 +20,12 @@ const Login = () => {
 
     userLogin(email, password)
       .then((result) => {
-        console.log(result);
-        navigate(location?.state ? location.state : "/")
+        setUser(result.user);
+        navigate(location?.state ? location.state : "/");
+        toast.success("User Logged in Successfully");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error("Invalid User", error.code);
       });
   };
 
@@ -32,10 +34,12 @@ const Login = () => {
   const googleLogin = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result.user);
+        setUser(result.user);
+        navigate(location?.state ? location.state : "/");
+        toast.success("User Logged in Successfully");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error("Invalid User", error.code);
       });
   };
 

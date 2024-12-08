@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
   const { user } = useContext(AuthContext);
@@ -47,7 +48,12 @@ fetch(`https://equi-sports-server-side-two.vercel.app/allProducts/${updatedData.
       .then((data) => {
           console.log(data);
           if (data.modifiedCount > 0) {
-              alert("Updated Successfully");
+            Swal.fire({
+              title: 'Item Updated Successfully',
+              text: 'Check Your Equipment LIst',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            })
         }
       });
   };
