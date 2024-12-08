@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { Bounce, Fade } from "react-awesome-reveal";
 import { Tooltip } from "react-tooltip";
+import Theme from "./Theme/Theme";
+import logo from "../assets/sports.png"
 
 const Navbar = () => {
   const { user, setUser, userSignOut } = useContext(AuthContext);
@@ -44,7 +45,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>{" "}
+        <div className="flex items-center justify-center gap-3">
+          <img className="w-10" src={logo} alt="" />
         <h2 className="text-[22px] font-semibold">SportsGear</h2>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-3 font-semibold text-[16px]">
@@ -62,7 +66,8 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end space-x-3">
+      <div className="navbar-end flex lg:flex-row flex-col lg:gap-0 gap-2 space-x-2">
+        <Theme></Theme>
         {user ? (
           <div className="flex items-center gap-2">
             <span className="" id="my-anchor-element-id">
@@ -93,7 +98,7 @@ const Navbar = () => {
               </button>
             </Link>
             <Link to="/register">
-              <button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold">
+              <button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold mt-2">
                 Registration
               </button>
             </Link>

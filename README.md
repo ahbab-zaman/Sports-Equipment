@@ -1,8 +1,11 @@
-# React + Vite
+**1. Project Name** : **Sports Gear**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**2. Live link** : [https://simple-firebase-2cb6e.firebaseapp.com/](https://simple-firebase-2cb6e.firebaseapp.com/)
 
-Currently, two official plugins are available:
+**3. 5 key features of this project** :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Implement Dark and Light mode toggling.
+- Sort by price on all equipment page.
+- Add equipment to database.
+- User login functionalities.
+- User Register functionalities.

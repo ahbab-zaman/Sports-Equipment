@@ -23,7 +23,7 @@ const AllEquipment = () => {
             onClick={() => handleSort("price")}
             className="btn rounded-none py-2 px-4 text-[#fff] font-bold bg-[#1c1c1ccd]"
           >
-            Sort By
+            Sort By Price
           </button>
         </div>
       </div>

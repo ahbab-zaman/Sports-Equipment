@@ -1,14 +1,34 @@
+import { NavLink } from "react-router-dom";
+import logo from "../assets/sports.png";
+
 const Footer = () => {
   return (
     <div>
       <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
-        <nav className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
+        <div className="flex items-center justify-center gap-3">
+          <img className="w-10" src={logo} alt="" />
+          <h2 className="text-xl font-bold">Sports Gear</h2>
+        </div>
+        <ul className="grid grid-flow-col gap-4 ">
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/allEquipment">All Equipments</NavLink>
+          </li>
+          <li>
+            <NavLink to="/addEquipment">Add Equipments</NavLink>
+          </li>
+          <li>
+            <NavLink to="/myList">My Equipment List</NavLink>
+          </li>
+        </ul>
+        <nav className="flex justify-center items-center gap-4">
+          <div className="flex flex-col gap-3 text-start">
+            <h2 className="text-lg font-semibold">Contact with us</h2>
+            <p className="font-semibold">Email : <span className="text-blue-500 link">ahbabtahmim@gmail.com</span></p>
+            <p className="font-semibold">Phone : <span className="text-blue-500 link">01739255837</span></p>
+          </div>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg
@@ -47,8 +67,8 @@ const Footer = () => {
         </nav>
         <aside>
           <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by ACME
-            Industries Ltd
+            Copyright © {new Date().getFullYear()} - All right reserved by{" "}
+            <span className="font-bold">SportsGear</span>
           </p>
         </aside>
       </footer>
