@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>{" "}
         <div className="flex items-center justify-center gap-3">
           <img className="w-10" src={logo} alt="" />
-        <h2 className="text-[22px] font-semibold">SportsGear</h2>
+        <h2 className="lg:text-[22px] text-base  font-semibold">SportsGear</h2>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -66,7 +66,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end flex lg:flex-row flex-col lg:gap-0 gap-2 space-x-2">
+      <div className="navbar-end flex lg:flex-row flex-col lg:space-x-2 space-x-0">
         <Theme></Theme>
         {user ? (
           <div className="flex items-center gap-2">
