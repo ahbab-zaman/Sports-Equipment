@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
       {
         path: "/allEquipment",
         element: <AllEquipment></AllEquipment>,
-        loader: () => fetch("http://localhost:5000/allProducts"),
+        loader: () => fetch("https://equi-sports-server-side-two.vercel.app/allProducts"),
       },
       {
         path: "/addEquipment",
@@ -58,12 +58,12 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://equi-sports-server-side-two.vercel.app/products/${params.id}`),
       },
       {
         path:"/updateProduct/:id",
         element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(`http://localhost:5000/allProducts/${params.id}`)
+        loader:({params})=>fetch(`https://equi-sports-server-side-two.vercel.app/allProducts/${params.id}`)
       }
     ],
   },
