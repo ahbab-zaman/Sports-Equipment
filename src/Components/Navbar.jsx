@@ -8,7 +8,7 @@ import logo from "../assets/sports.png"
 const Navbar = () => {
   const { user, setUser, userSignOut } = useContext(AuthContext);
   return (
-    <div className="navbar">
+    <div className="navbar bg-white fixed top-0 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

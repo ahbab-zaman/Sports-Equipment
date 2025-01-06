@@ -30,7 +30,33 @@ const Banner = () => {
         <SwiperSlide>
           <img src={bannerImage4} alt="" />
         </SwiperSlide>
-        ...
+        <style>
+          {`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: white;
+          background-color: #4b5563;
+          border-radius: 9999px;
+          padding: 10px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s ease;
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          background-color: #F7F6F9; 
+          color:#000;
+          border:1px solid black
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 1rem;
+        }
+        `}
+        </style>
       </Swiper>
     </div>
   );

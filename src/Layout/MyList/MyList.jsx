@@ -11,7 +11,7 @@ const MyList = () => {
   console.log(deleteProduct)
   Title("My Equipment List");
   useEffect(() => {
-    fetch(`https://equi-sports-server-side-two.vercel.app/myProduct/${user.email}`)
+    fetch(`http://localhost:5000/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setDeleteProduct(data);

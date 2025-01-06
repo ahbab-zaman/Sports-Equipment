@@ -6,7 +6,7 @@ const AllEquipment = () => {
   const allEquipment = useLoaderData();
   const [sortItem, setSortItem] = useState(allEquipment);
   const handleSort = () => {
-    fetch("https://equi-sports-server-side-two.vercel.app/allProduct")
+    fetch("http://localhost:5000/allProduct")
       .then((res) => res.json())
       .then((data) => {
         setSortItem(data)

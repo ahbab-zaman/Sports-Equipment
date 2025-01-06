@@ -15,7 +15,7 @@ const MyUser = ({ list, setDeleteProduct, deleteProduct }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://equi-sports-server-side-two.vercel.app/products/${id}`, {
+        fetch(`http://localhost:5000/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
