@@ -29,8 +29,8 @@ const Brands = () => {
         Our Top Brands
       </h2>
       <div className="py-8 w-full">
-        <div className="w-11/12 mx-auto text-center space-y-2">
-          <div className="slider-container py-8">
+        <div className="w-11/12 mx-auto text-center space-y-2 ">
+          <div className="slider-container py-8 ">
             <Slider {...settings} className="slick-arrow px-8">
               <div>
                 <img src={brandImage1} alt="" />

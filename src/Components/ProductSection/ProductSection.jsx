@@ -4,7 +4,7 @@ import ProductCard from "../ProductCard/ProductCard";
 const ProductSection = () => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://equi-sports-server-side-two.vercel.app/products')
         .then(res=> res.json())
         .then(data=> {
             console.log(data)
@@ -12,7 +12,7 @@ const ProductSection = () => {
         })
     },[])
     return (
-        <div className="w-11/12 mx-auto py-8">
+        <div className="w-11/12 mx-auto py-1">
            <div className="text-center space-y-2">
             <h2 className="text-4xl font-semibold">Explore Our Products</h2>
             <p className="w-1/2 mx-auto">These are top brand products of our company. We both import and export these to foreign country.</p>

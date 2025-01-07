@@ -37,7 +37,7 @@ const UpdateProduct = () => {
     };
     console.log(updatedEquipments);
 
-fetch(`http://localhost:5000/allProducts/${updatedData._id}`, {
+fetch(`https://equi-sports-server-side-two.vercel.app/allProducts/${updatedData._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -1,50 +1,59 @@
 import { useContext } from "react";
 import Title from "../../Components/Title/Title";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const AddEquipment = () => {
   Title("Add Equipment");
-  const {user,setUser} = useContext(AuthContext)
+  const { user, setUser } = useContext(AuthContext);
   const handleAddEquipment = (e) => {
     e.preventDefault();
     const form = e.target;
-    const item = form.item.value
-    const category = form.category.value
-    const description = form.description.value
-    const photo = form.photo.value
-    const rating = form.rating.value
-    const custom = form.custom.value
-    const price = parseInt(form.price.value)
-    const process = form.process.value
-    const stock = form.stock.value
-    const name = form.name.value
-    const email = form.email.value
-    const newEquipments = {item, category, description, photo, rating, custom, price, process, stock, name, email}
-    console.log(newEquipments)
+    const item = form.item.value;
+    const category = form.category.value;
+    const description = form.description.value;
+    const photo = form.photo.value;
+    const rating = form.rating.value;
+    const custom = form.custom.value;
+    const price = parseInt(form.price.value);
+    const process = form.process.value;
+    const stock = form.stock.value;
+    const name = form.name.value;
+    const email = form.email.value;
+    const newEquipments = {
+      item,
+      category,
+      description,
+      photo,
+      rating,
+      custom,
+      price,
+      process,
+      stock,
+      name,
+      email,
+    };
+    console.log(newEquipments);
 
-
-    fetch('http://localhost:5000',{
-      method:'POST',
-      headers:{
-        "Content-type": "application/json"
+    fetch("https://equi-sports-server-side-two.vercel.app/products", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
       },
-      body:JSON.stringify(newEquipments)
+      body: JSON.stringify(newEquipments),
     })
-    .then(res => res.json())
-    .then(data => {
-      setUser(data)
-      Swal.fire({
-        title: 'Item Added Successfully',
-        text: 'Check Your Equipment LIst',
-        icon: 'success',
-        confirmButtonText: 'OK'
-      })
-      form.reset()
-    })
-  }
-
-
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+        Swal.fire({
+          title: "Item Added Successfully",
+          text: "Check Your Equipment LIst",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+        form.reset();
+      });
+  };
 
   return (
     <div className="w-11/12 mx-auto py-6">

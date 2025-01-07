@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 const Banner = () => {
   return (
-    <div className="g:h-[650px] h-auto w-full">
+    <div className="lg:h-[550px] h-auto w-full">
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -19,16 +19,16 @@ const Banner = () => {
         onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
-          <img src={bannerImage1} alt="" />
+          <img className="h-[520px] w-full " src={bannerImage1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bannerImage2} alt="" />
+          <img className="h-[520px] w-full" src={bannerImage2} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bannerImage3} alt="" />
+          <img className="h-[520px] w-full" src={bannerImage3} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bannerImage4} alt="" />
+          <img className="h-[520px] w-full" src={bannerImage4} alt="" />
         </SwiperSlide>
         <style>
           {`

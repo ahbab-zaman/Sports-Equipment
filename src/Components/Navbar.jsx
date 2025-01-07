@@ -1,14 +1,32 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Tooltip } from "react-tooltip";
 import Theme from "./Theme/Theme";
-import logo from "../assets/sports.png"
+import logo from "../assets/sports.png";
 
 const Navbar = () => {
-  const { user, setUser, userSignOut } = useContext(AuthContext);
+  const { user, userSignOut } = useContext(AuthContext);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="navbar bg-white fixed top-0 z-10">
+    <div
+      className={`navbar bg-base-200 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-base-200 shadow-lg" : "bg-white"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,8 +64,10 @@ const Navbar = () => {
           </ul>
         </div>{" "}
         <div className="flex items-center justify-center gap-3">
-          <img className="w-10" src={logo} alt="" />
-        <h2 className="lg:text-[22px] text-base  font-semibold">SportsGear</h2>
+          <img className="w-10 text-transparent" src={logo} alt="" />
+          <h2 className="lg:text-[22px] text-base  font-semibold">
+            SportsGear
+          </h2>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -84,7 +104,8 @@ const Navbar = () => {
             <Link to="/login">
               <button
                 onClick={userSignOut}
-                className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold"
+                className="px-4 py-2 rounded-full
+            bg-[#1c1c1ccd] text-white font-semibold hover:bg-base-200 hover:text-black hover:transition-all hover:duration-300"
               >
                 Logout
               </button>
@@ -93,12 +114,18 @@ const Navbar = () => {
         ) : (
           <div className="space-x-3">
             <Link to="/login">
-              <button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold">
+              <button
+                className="px-4 py-2 rounded-full
+            bg-[#1c1c1ccd] text-white font-semibold hover:bg-base-200 hover:text-black hover:transition-all hover:duration-300"
+              >
                 Login
               </button>
             </Link>
             <Link to="/register">
-              <button className="px-4 py-2 bg-[#1c1c1ccd] text-white font-semibold mt-2">
+              <button
+                className="px-4 py-2 rounded-full
+            bg-[#1c1c1ccd] text-white font-semibold hover:bg-base-200 hover:text-black hover:transition-all hover:duration-300"
+              >
                 Registration
               </button>
             </Link>

@@ -3,7 +3,7 @@ import Title from "../../Components/Title/Title";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-
+import registerImg from "../../assets/registerImg.avif"
 const Register = () => {
   Title("Register");
   const { userRegister, profileUpdate, user, setUser } =
@@ -46,12 +46,11 @@ const Register = () => {
       });
   };
   return (
-    <div>
-      <div className="py-4">
-        <h2 className="text-3xl text-center font-semibold">Registration</h2>
+    <div className="flex lg:flex-row flex-col">
+      <div className="lg:w-1/2 w-full">
+    <img className="pt-12" src={registerImg} alt="" />
       </div>
-
-      <div>
+      <div className="lg:w-1/2 w-full lg:pt-20 pt-0">
         <div className="hero">
           <div className="hero-content w-full flex-col">
             <div className="card shrink-0 shadow-2x w-3/4 border mx-auto">
