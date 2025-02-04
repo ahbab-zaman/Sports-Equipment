@@ -44,6 +44,10 @@
 
 ## 🔧 Project Configuration
 
+
+## 🛠️ Dependencies
+
+```json
 "dependencies": {
   "@emotion/react": "^11.13.5",
   "aos": "^3.0.0-beta.6",
