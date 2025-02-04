@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://simple-firebase-2cb6e.firebaseapp.com/)
 
- HEAD
+
 ## 📌 Introduction
 
 **3. Description** : This is a user friendly Sports related product web appllication. User can explore their desirable equipment and buy them. There are lot of custome features in this website.
@@ -45,29 +45,23 @@
 ## 🔧 Project Configuration
 
 ## 🛠️ Dependencies:
-
-"dependencies": {
-"@emotion/react": "^11.13.5",
-"aos": "^3.0.0-beta.6",
-"axios": "^1.7.9",
-"firebase": "^11.0.2",
-"localforage": "^1.10.0",
-"lottie-react": "^2.4.0",
-"match-sorter": "^8.0.0",
-"react": "^18.2.0",
-"react-awesome-slider": "^4.1.0",
-"react-dom": "^18.2.0",
-"react-hot-toast": "^2.4.1",
-"react-icons": "^5.4.0",
-"react-lazy-load": "^4.0.1",
-"react-router-dom": "^7.0.2",
-"react-slick": "^0.30.2",
-"react-tooltip": "^5.28.0",
-"slick-carousel": "^1.8.1",
-"sort-by": "^1.2.0",
-"sweetalert2": "^11.14.5",
-"swiper": "^11.1.15"
+"devDependencies": {
+  "@eslint/js": "^9.15.0",
+  "@types/react": "^18.3.12",
+  "@types/react-dom": "^18.3.1",
+  "@vitejs/plugin-react": "^4.3.4",
+  "autoprefixer": "^10.4.20",
+  "daisyui": "^4.12.14",
+  "eslint": "^9.15.0",
+  "eslint-plugin-react": "^7.37.2",
+  "eslint-plugin-react-hooks": "^5.0.0",
+  "eslint-plugin-react-refresh": "^0.4.14",
+  "globals": "^15.12.0",
+  "postcss": "^8.4.49",
+  "tailwindcss": "^3.4.15",
+  "vite": "^6.0.1"
 }
+
 
 ## 🛠️ Dev Dependencies
 
