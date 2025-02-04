@@ -2,7 +2,12 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://simple-firebase-2cb6e.firebaseapp.com/)
 
+ HEAD
 ## 📌 Introduction
+
+**3. Description** : This is a user friendly Sports related product web appllication. User can explore their desirable equipment and buy them. There are lot of custome features in this website.
+
+
 
 **Sports Gear** is a fully responsive and user-friendly e-commerce platform that offers a wide range of sports equipment and gear. Users can explore various sports products, purchase based on recommendations, and interact with other users' queries and feedback.
 
